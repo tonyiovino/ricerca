@@ -12,10 +12,15 @@ passo = 0.001
 
 zero = 0.00001
 
+count = 0
+
 while x <= xf:
     polinomio = abs(x**3 + 4.5 * x**2 + 3.5 * x - 3)
     if polinomio < zero:
         break
+
     x = x + passo
-    print("Polinomio: ", polinomio)
+    count += 1
+
 print("X: ", x)
+print("Passaggi: ", count)
